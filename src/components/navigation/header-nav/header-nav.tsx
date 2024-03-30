@@ -18,7 +18,7 @@ import { FaHome, FaUserFriends } from "react-icons/fa";
 
 export default function HeaderNav() {
   return (
-    <div className="h-16 w-screen flex justify-center px-6 lg:px-0 bg-white fixed top-0">
+    <div className="h-16 w-screen flex justify-center px-6 lg:px-0 bg-white fixed top-0 z-10">
       <div className="w-full lg:w-[1128px] h-full justify-between flex items-center">
         <span className="font-normal text-xl">LearnWise</span>
         <div>
