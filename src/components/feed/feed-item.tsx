@@ -12,6 +12,7 @@ interface FeedItemProps {
 }
 
 export default function FeedItem({title, post}: FeedItemProps) {
+  const [userLikes, setUserLikes] = useState(23);
   const [heartColorClass, setHeartColorClass] = useState('text-gray-400');
   const [showFullText, setShowFullText] = useState(false);
 
@@ -20,8 +21,8 @@ export default function FeedItem({title, post}: FeedItemProps) {
   };
 
   const handleHeartColorClassClick = () => {
-    // Toggle the color between 'gray' and 'red' on click
     setHeartColorClass(heartColorClass === 'text-gray-400' ? 'text-red-500' : 'text-gray-400');
+    setUserLikes(heartColorClass === 'text-gray-400' ? userLikes + 1 : userLikes - 1);
   };
 
   return (
@@ -78,11 +79,11 @@ export default function FeedItem({title, post}: FeedItemProps) {
               size={24} 
               onClick={handleHeartColorClassClick}
             />
-            <span className="text-xs font-thin">23 Likes</span>
+            <span className="text-xs font-thin">{userLikes} Likes</span>
           </div>
           <div className="flex flex-col items-center text-gray-700">
             <LiaCommentSolid size={24} />
-            <span className="text-xs font-thin">11 Comments</span>
+            <span className="text-xs font-thin">{11} Comments</span>
           </div>
           <div className="flex flex-col items-center text-gray-500">
             <IoBookmarkOutline size={24} />
