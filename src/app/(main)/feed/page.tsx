@@ -35,10 +35,25 @@ const Feed = () => {
   };
 
   return (
-    <div className="">
-      {posts.map(post => (
-        <FeedItem key={post.id} title={post.title} post={post.body} />
-      ))}
+    <div className="md:grid md:grid-cols-4">
+      <div className="hidden md:block">
+        left section
+      </div>
+      <div className="md:col-span-2">
+        <div className="hidden md:block">
+          heading
+        </div>
+        <div>
+          {posts.map(post => (
+            <FeedItem key={post.id} title={post.title} post={post.body} />
+          ))}
+
+        </div>
+      </div>
+
+      <div className="hidden md:block">
+        right section
+      </div>
     </div>
   )
 }
