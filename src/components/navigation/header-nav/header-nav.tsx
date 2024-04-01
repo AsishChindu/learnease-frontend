@@ -25,7 +25,7 @@ export default function HeaderNav() {
           <div className="ml-3 rounded-2xl py-1 px-2 bg-gray-100 flex items-center">
             <CiSearch size={20} />
             
-            <span className="ml-1 text-gray-400 w-48"><input className="text-gray-700 bg-gray-100 font-thin outline-noneas" type="text" placeholder="Search" /></span>
+            <span className="ml-1 text-gray-400 w-48"><input className="text-gray-700 bg-gray-100 font-thin outline-none" type="text" placeholder="Search" /></span>
           </div>
         </div>
         <div>
