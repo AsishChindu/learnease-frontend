@@ -12,7 +12,7 @@ const Layout: React.FC<LayoutProps> = async ({ children }) => {
         <HeaderNav />
       </header>
 
-      <main className="mt-14 bg-stone-100">
+      <main className="my-16">
         {children}
       </main>
 

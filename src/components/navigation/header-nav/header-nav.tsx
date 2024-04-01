@@ -5,7 +5,7 @@ import { GoHome } from "react-icons/go";
 import { PiVideoFill } from "react-icons/pi";
 import { HiOutlineSearch } from "react-icons/hi";
 import { HiLanguage, HiMiniLanguage, HiHome, HiOutlineUser, HiOutlineShoppingBag } from "react-icons/hi2";
-import { CiBoxList } from "react-icons/ci";
+import { CiBoxList, CiSearch } from "react-icons/ci";
 import { RiHome2Line } from "react-icons/ri";
 import { AiOutlineFire, AiFillMessage } from "react-icons/ai";
 import { IoIosNotifications } from "react-icons/io";
@@ -18,9 +18,16 @@ import { FaHome, FaUserFriends } from "react-icons/fa";
 
 export default function HeaderNav() {
   return (
-    <div className="h-14 w-screen flex justify-center px-6 lg:px-0 bg-white fixed top-0">
+    <div className="h-16 w-screen flex justify-center px-6 lg:px-0 bg-white fixed top-0 z-10">
       <div className="w-full lg:w-[1128px] h-full justify-between flex items-center">
-        <span className="font-normal text-xl">LearnWise</span>
+        <div className="flex items-center justify-between">
+          <div className="font-normal text-xl italic font-mono tracking-tighter">learnease</div>
+          <div className="ml-3 rounded-2xl py-1 px-2 bg-gray-100 flex items-center">
+            <CiSearch size={20} />
+            
+            <span className="ml-1 text-gray-400 w-48"><input className="text-gray-700 bg-gray-100 font-thin outline-none" type="text" placeholder="Search" /></span>
+          </div>
+        </div>
         <div>
           <IoIosNotifications size={24} />
         </div>

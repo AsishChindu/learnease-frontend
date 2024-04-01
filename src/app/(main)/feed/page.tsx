@@ -23,22 +23,37 @@ const Feed = () => {
   
   const fetchPosts = async () => {
     try {
-      const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+      const response = await fetch('https://dummyjson.com/posts');
       if (!response.ok) {
         throw new Error('Failed to fetch posts');
       }
       const data = await response.json();
-      setPosts(data);
+      setPosts(data.posts);
     } catch (error) {
       console.error('Error fetching posts:', error);
     }
   };
 
   return (
-    <div className="">
-      {posts.map(post => (
-        <FeedItem key={post.id} title={post.title} post={post.body} />
-      ))}
+    <div className="md:grid md:grid-cols-4">
+      <div className="hidden md:block">
+        left section
+      </div>
+      <div className="md:col-span-2">
+        <div className="hidden md:block">
+          heading
+        </div>
+        <div>
+          {posts.map(post => (
+            <FeedItem key={post.id} title={post.title} post={post.body} />
+          ))}
+
+        </div>
+      </div>
+
+      <div className="hidden md:block">
+        right section
+      </div>
     </div>
   )
 }
